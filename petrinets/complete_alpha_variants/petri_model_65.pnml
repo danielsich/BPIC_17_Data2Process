@@ -1,43 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pnml>
-  <net id="alpha_classic_net_1778331059.6996338" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+  <net id="alpha_classic_net_1778491106.394191" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
     <name>
-      <text>alpha_classic_net_1778331059.6996338</text>
+      <text>alpha_classic_net_1778491106.394191</text>
     </name>
     <page id="n0">
-      <place id="start">
-        <name>
-          <text>start</text>
-        </name>
-        <initialMarking>
-          <text>1</text>
-        </initialMarking>
-      </place>
-      <place id="({'A_Create Application'}, {'A_Submitted'})">
-        <name>
-          <text>({'A_Create Application'}, {'A_Submitted'})</text>
-        </name>
-      </place>
-      <place id="({'O_Accepted'}, {'A_Pending'})">
-        <name>
-          <text>({'O_Accepted'}, {'A_Pending'})</text>
-        </name>
-      </place>
-      <place id="({'O_Created'}, {'O_Sent (online only)'})">
-        <name>
-          <text>({'O_Created'}, {'O_Sent (online only)'})</text>
-        </name>
-      </place>
-      <place id="({'A_Validating'}, {'O_Returned', 'W_Validate application'})">
-        <name>
-          <text>({'A_Validating'}, {'O_Returned', 'W_Validate application'})</text>
-        </name>
-      </place>
-      <place id="({'O_Returned', 'W_Validate application'}, {'A_Incomplete'})">
-        <name>
-          <text>({'O_Returned', 'W_Validate application'}, {'A_Incomplete'})</text>
-        </name>
-      </place>
       <place id="({'A_Submitted'}, {'A_Concept'})">
         <name>
           <text>({'A_Submitted'}, {'A_Concept'})</text>
@@ -48,59 +15,142 @@
           <text>end</text>
         </name>
       </place>
+      <place id="({'W_Complete application'}, {'A_Complete'})">
+        <name>
+          <text>({'W_Complete application'}, {'A_Complete'})</text>
+        </name>
+      </place>
+      <place id="({'A_Accepted', 'A_Complete'}, {'O_Create Offer'})">
+        <name>
+          <text>({'A_Accepted', 'A_Complete'}, {'O_Create Offer'})</text>
+        </name>
+      </place>
+      <place id="({'A_Accepted', 'A_Validating'}, {'O_Create Offer'})">
+        <name>
+          <text>({'A_Accepted', 'A_Validating'}, {'O_Create Offer'})</text>
+        </name>
+      </place>
+      <place id="({'O_Created', 'A_Complete'}, {'A_Validating'})">
+        <name>
+          <text>({'O_Created', 'A_Complete'}, {'A_Validating'})</text>
+        </name>
+      </place>
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="({'O_Accepted'}, {'A_Pending'})">
+        <name>
+          <text>({'O_Accepted'}, {'A_Pending'})</text>
+        </name>
+      </place>
+      <place id="({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})">
+        <name>
+          <text>({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})</text>
+        </name>
+      </place>
       <place id="({'A_Concept'}, {'A_Accepted'})">
         <name>
           <text>({'A_Concept'}, {'A_Accepted'})</text>
         </name>
       </place>
-      <place id="({'A_Incomplete', 'A_Accepted'}, {'O_Create Offer'})">
+      <place id="({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})">
         <name>
-          <text>({'A_Incomplete', 'A_Accepted'}, {'O_Create Offer'})</text>
+          <text>({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})</text>
         </name>
       </place>
-      <place id="({'A_Incomplete', 'O_Sent (online only)'}, {'A_Validating'})">
+      <place id="({'A_Complete'}, {'O_Create Offer', 'W_Call after offers'})">
         <name>
-          <text>({'A_Incomplete', 'O_Sent (online only)'}, {'A_Validating'})</text>
+          <text>({'A_Complete'}, {'O_Create Offer', 'W_Call after offers'})</text>
         </name>
       </place>
-      <place id="({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})">
+      <place id="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})">
         <name>
-          <text>({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})</text>
+          <text>({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})</text>
         </name>
       </place>
-      <transition id="A_Concept">
+      <place id="({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})">
         <name>
-          <text>A_Concept</text>
+          <text>({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})</text>
+        </name>
+      </place>
+      <place id="({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})">
+        <name>
+          <text>({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})</text>
+        </name>
+      </place>
+      <place id="({'A_Submitted'}, {'W_Handle leads'})">
+        <name>
+          <text>({'A_Submitted'}, {'W_Handle leads'})</text>
+        </name>
+      </place>
+      <place id="({'A_Cancelled', 'A_Pending'}, {'W_Call incomplete files'})">
+        <name>
+          <text>({'A_Cancelled', 'A_Pending'}, {'W_Call incomplete files'})</text>
+        </name>
+      </place>
+      <place id="({'W_Call incomplete files', 'W_Call after offers'}, {'A_Validating'})">
+        <name>
+          <text>({'W_Call incomplete files', 'W_Call after offers'}, {'A_Validating'})</text>
+        </name>
+      </place>
+      <place id="({'W_Call incomplete files', 'A_Complete'}, {'A_Validating'})">
+        <name>
+          <text>({'W_Call incomplete files', 'A_Complete'}, {'A_Validating'})</text>
+        </name>
+      </place>
+      <place id="({'W_Handle leads', 'A_Create Application'}, {'A_Concept'})">
+        <name>
+          <text>({'W_Handle leads', 'A_Create Application'}, {'A_Concept'})</text>
+        </name>
+      </place>
+      <place id="({'O_Created', 'A_Pending'}, {'W_Call incomplete files'})">
+        <name>
+          <text>({'O_Created', 'A_Pending'}, {'W_Call incomplete files'})</text>
+        </name>
+      </place>
+      <place id="({'A_Create Application'}, {'A_Submitted'})">
+        <name>
+          <text>({'A_Create Application'}, {'A_Submitted'})</text>
+        </name>
+      </place>
+      <place id="({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})">
+        <name>
+          <text>({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})</text>
+        </name>
+      </place>
+      <place id="({'W_Complete application', 'A_Validating'}, {'O_Create Offer'})">
+        <name>
+          <text>({'W_Complete application', 'A_Validating'}, {'O_Create Offer'})</text>
+        </name>
+      </place>
+      <place id="({'O_Created', 'W_Call after offers'}, {'A_Validating'})">
+        <name>
+          <text>({'O_Created', 'W_Call after offers'}, {'A_Validating'})</text>
+        </name>
+      </place>
+      <transition id="A_Cancelled">
+        <name>
+          <text>A_Cancelled</text>
         </name>
       </transition>
-      <transition id="O_Cancelled">
+      <transition id="A_Validating">
         <name>
-          <text>O_Cancelled</text>
+          <text>A_Validating</text>
         </name>
       </transition>
-      <transition id="A_Create Application">
+      <transition id="O_Sent (mail and online)">
         <name>
-          <text>A_Create Application</text>
+          <text>O_Sent (mail and online)</text>
         </name>
       </transition>
-      <transition id="A_Accepted">
+      <transition id="W_Complete application">
         <name>
-          <text>A_Accepted</text>
-        </name>
-      </transition>
-      <transition id="A_Complete">
-        <name>
-          <text>A_Complete</text>
-        </name>
-      </transition>
-      <transition id="O_Accepted">
-        <name>
-          <text>O_Accepted</text>
-        </name>
-      </transition>
-      <transition id="O_Sent (online only)">
-        <name>
-          <text>O_Sent (online only)</text>
+          <text>W_Complete application</text>
         </name>
       </transition>
       <transition id="W_Validate application">
@@ -108,9 +158,39 @@
           <text>W_Validate application</text>
         </name>
       </transition>
-      <transition id="A_Incomplete">
+      <transition id="A_Denied">
         <name>
-          <text>A_Incomplete</text>
+          <text>A_Denied</text>
+        </name>
+      </transition>
+      <transition id="A_Concept">
+        <name>
+          <text>A_Concept</text>
+        </name>
+      </transition>
+      <transition id="A_Create Application">
+        <name>
+          <text>A_Create Application</text>
+        </name>
+      </transition>
+      <transition id="A_Submitted">
+        <name>
+          <text>A_Submitted</text>
+        </name>
+      </transition>
+      <transition id="W_Call incomplete files">
+        <name>
+          <text>W_Call incomplete files</text>
+        </name>
+      </transition>
+      <transition id="O_Accepted">
+        <name>
+          <text>O_Accepted</text>
+        </name>
+      </transition>
+      <transition id="A_Pending">
+        <name>
+          <text>A_Pending</text>
         </name>
       </transition>
       <transition id="O_Created">
@@ -123,14 +203,39 @@
           <text>O_Returned</text>
         </name>
       </transition>
-      <transition id="A_Submitted">
+      <transition id="W_Assess potential fraud">
         <name>
-          <text>A_Submitted</text>
+          <text>W_Assess potential fraud</text>
         </name>
       </transition>
-      <transition id="A_Pending">
+      <transition id="O_Cancelled">
         <name>
-          <text>A_Pending</text>
+          <text>O_Cancelled</text>
+        </name>
+      </transition>
+      <transition id="W_Handle leads">
+        <name>
+          <text>W_Handle leads</text>
+        </name>
+      </transition>
+      <transition id="A_Accepted">
+        <name>
+          <text>A_Accepted</text>
+        </name>
+      </transition>
+      <transition id="O_Sent (online only)">
+        <name>
+          <text>O_Sent (online only)</text>
+        </name>
+      </transition>
+      <transition id="A_Incomplete">
+        <name>
+          <text>A_Incomplete</text>
+        </name>
+      </transition>
+      <transition id="W_Call after offers">
+        <name>
+          <text>W_Call after offers</text>
         </name>
       </transition>
       <transition id="O_Create Offer">
@@ -138,44 +243,103 @@
           <text>O_Create Offer</text>
         </name>
       </transition>
-      <transition id="O_Sent (mail and online)">
+      <transition id="O_Refused">
         <name>
-          <text>O_Sent (mail and online)</text>
+          <text>O_Refused</text>
         </name>
       </transition>
-      <transition id="A_Validating">
+      <transition id="A_Complete">
         <name>
-          <text>A_Validating</text>
+          <text>A_Complete</text>
         </name>
       </transition>
-      <arc id="4671071504" source="A_Incomplete" target="({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})"/>
-      <arc id="4671064336" source="({'A_Concept'}, {'A_Accepted'})" target="A_Accepted"/>
-      <arc id="4671072400" source="A_Create Application" target="({'A_Create Application'}, {'A_Submitted'})"/>
-      <arc id="4671070608" source="({'A_Create Application'}, {'A_Submitted'})" target="A_Submitted"/>
-      <arc id="4671075088" source="({'A_Incomplete', 'A_Accepted'}, {'O_Create Offer'})" target="O_Create Offer"/>
-      <arc id="4671066128" source="A_Incomplete" target="({'A_Incomplete', 'O_Sent (online only)'}, {'A_Validating'})"/>
-      <arc id="4671077776" source="({'A_Validating'}, {'O_Returned', 'W_Validate application'})" target="W_Validate application"/>
-      <arc id="4671075872" source="A_Validating" target="({'A_Validating'}, {'O_Returned', 'W_Validate application'})"/>
-      <arc id="4671068592" source="start" target="A_Create Application"/>
-      <arc id="4671070384" source="({'O_Accepted'}, {'A_Pending'})" target="A_Pending"/>
-      <arc id="4671072176" source="A_Incomplete" target="({'A_Incomplete', 'A_Accepted'}, {'O_Create Offer'})"/>
-      <arc id="4671063216" source="({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})" target="O_Create Offer"/>
-      <arc id="4671069488" source="W_Validate application" target="({'O_Returned', 'W_Validate application'}, {'A_Incomplete'})"/>
-      <arc id="4671068480" source="O_Cancelled" target="end"/>
-      <arc id="4671065792" source="O_Created" target="({'O_Created'}, {'O_Sent (online only)'})"/>
-      <arc id="4671071168" source="({'O_Created'}, {'O_Sent (online only)'})" target="O_Sent (online only)"/>
-      <arc id="4671077328" source="O_Accepted" target="({'O_Accepted'}, {'A_Pending'})"/>
-      <arc id="4671062096" source="O_Sent (online only)" target="({'A_Incomplete', 'O_Sent (online only)'}, {'A_Validating'})"/>
-      <arc id="4671066576" source="({'A_Incomplete', 'O_Sent (online only)'}, {'A_Validating'})" target="A_Validating"/>
-      <arc id="4671075536" source="({'A_Validating'}, {'O_Returned', 'W_Validate application'})" target="O_Returned"/>
-      <arc id="4671063776" source="A_Concept" target="({'A_Concept'}, {'A_Accepted'})"/>
-      <arc id="4671066464" source="({'A_Submitted'}, {'A_Concept'})" target="A_Concept"/>
-      <arc id="4671071840" source="({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})" target="A_Validating"/>
-      <arc id="4671070048" source="({'O_Returned', 'W_Validate application'}, {'A_Incomplete'})" target="A_Incomplete"/>
-      <arc id="4671075312" source="A_Submitted" target="({'A_Submitted'}, {'A_Concept'})"/>
-      <arc id="4671064560" source="A_Accepted" target="({'A_Incomplete', 'A_Accepted'}, {'O_Create Offer'})"/>
-      <arc id="4671065456" source="({'A_Incomplete'}, {'O_Create Offer', 'A_Validating', 'O_Accepted'})" target="O_Accepted"/>
-      <arc id="4671071728" source="O_Returned" target="({'O_Returned', 'W_Validate application'}, {'A_Incomplete'})"/>
+      <arc id="4671782400" source="A_Validating" target="({'A_Accepted', 'A_Validating'}, {'O_Create Offer'})"/>
+      <arc id="4671771648" source="A_Cancelled" target="({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})"/>
+      <arc id="4671777808" source="({'A_Concept'}, {'A_Accepted'})" target="A_Accepted"/>
+      <arc id="4671770640" source="({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})" target="A_Cancelled"/>
+      <arc id="4671769632" source="O_Cancelled" target="end"/>
+      <arc id="4671776800" source="({'A_Accepted', 'A_Complete'}, {'O_Create Offer'})" target="O_Create Offer"/>
+      <arc id="4667385888" source="A_Pending" target="({'O_Created', 'A_Pending'}, {'W_Call incomplete files'})"/>
+      <arc id="4667389472" source="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})" target="O_Accepted"/>
+      <arc id="4671775792" source="W_Assess potential fraud" target="end"/>
+      <arc id="4671779376" source="({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})" target="W_Complete application"/>
+      <arc id="4667381296" source="W_Call after offers" target="({'O_Created', 'W_Call after offers'}, {'A_Validating'})"/>
+      <arc id="4667391040" source="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})" target="A_Denied"/>
+      <arc id="4671778368" source="({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})" target="O_Create Offer"/>
+      <arc id="4671780944" source="A_Cancelled" target="({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})"/>
+      <arc id="4667386448" source="({'W_Call incomplete files', 'W_Call after offers'}, {'A_Validating'})" target="A_Validating"/>
+      <arc id="4671772768" source="A_Accepted" target="({'A_Accepted', 'A_Complete'}, {'O_Create Offer'})"/>
+      <arc id="4671779936" source="A_Complete" target="({'A_Accepted', 'A_Complete'}, {'O_Create Offer'})"/>
+      <arc id="4671776352" source="O_Created" target="({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})"/>
+      <arc id="4667378272" source="O_Created" target="({'O_Created', 'W_Call after offers'}, {'A_Validating'})"/>
+      <arc id="4667389024" source="W_Call incomplete files" target="({'W_Call incomplete files', 'W_Call after offers'}, {'A_Validating'})"/>
+      <arc id="4671775344" source="({'A_Submitted'}, {'A_Concept'})" target="A_Concept"/>
+      <arc id="4671778928" source="({'A_Submitted'}, {'W_Handle leads'})" target="W_Handle leads"/>
+      <arc id="4671767168" source="W_Complete application" target="end"/>
+      <arc id="4671781504" source="({'O_Accepted'}, {'A_Pending'})" target="A_Pending"/>
+      <arc id="4671770752" source="A_Complete" target="({'O_Created', 'A_Complete'}, {'A_Validating'})"/>
+      <arc id="4667390592" source="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})" target="A_Cancelled"/>
+      <arc id="4671769744" source="({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})" target="A_Denied"/>
+      <arc id="4671775904" source="A_Submitted" target="({'A_Submitted'}, {'W_Handle leads'})"/>
+      <arc id="4671768736" source="W_Complete application" target="({'W_Complete application'}, {'A_Complete'})"/>
+      <arc id="4671779488" source="({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})" target="W_Call after offers"/>
+      <arc id="4667388576" source="({'O_Created', 'A_Pending'}, {'W_Call incomplete files'})" target="W_Call incomplete files"/>
+      <arc id="4671772320" source="W_Call incomplete files" target="({'W_Call incomplete files', 'A_Complete'}, {'A_Validating'})"/>
+      <arc id="4671771312" source="start" target="A_Create Application"/>
+      <arc id="4671767728" source="A_Complete" target="({'A_Complete'}, {'O_Create Offer', 'W_Call after offers'})"/>
+      <arc id="4671782064" source="({'A_Complete'}, {'O_Create Offer', 'W_Call after offers'})" target="W_Call after offers"/>
+      <arc id="4671770304" source="A_Cancelled" target="end"/>
+      <arc id="4671766720" source="O_Returned" target="end"/>
+      <arc id="4671781056" source="A_Accepted" target="({'A_Accepted', 'A_Validating'}, {'O_Create Offer'})"/>
+      <arc id="4667375808" source="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})" target="O_Create Offer"/>
+      <arc id="4671776464" source="A_Incomplete" target="end"/>
+      <arc id="4671780048" source="A_Denied" target="({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})"/>
+      <arc id="4671782624" source="A_Accepted" target="({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})"/>
+      <arc id="4667376368" source="({'W_Handle leads', 'A_Create Application'}, {'A_Concept'})" target="A_Concept"/>
+      <arc id="4671781616" source="W_Call incomplete files" target="end"/>
+      <arc id="4671770864" source="A_Concept" target="({'A_Concept'}, {'A_Accepted'})"/>
+      <arc id="4671778032" source="({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})" target="W_Complete application"/>
+      <arc id="4671780608" source="A_Create Application" target="({'A_Create Application'}, {'A_Submitted'})"/>
+      <arc id="4671777024" source="O_Accepted" target="({'O_Accepted'}, {'A_Pending'})"/>
+      <arc id="4667386112" source="A_Validating" target="({'W_Complete application', 'A_Validating'}, {'O_Create Offer'})"/>
+      <arc id="4671776016" source="A_Submitted" target="({'A_Submitted'}, {'A_Concept'})"/>
+      <arc id="4671771424" source="({'A_Accepted', 'A_Validating'}, {'O_Create Offer'})" target="O_Create Offer"/>
+      <arc id="4671782176" source="A_Complete" target="({'A_Complete'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied'})"/>
+      <arc id="4667387680" source="({'W_Complete application', 'A_Validating'}, {'O_Create Offer'})" target="O_Create Offer"/>
+      <arc id="4667383088" source="O_Created" target="({'O_Created', 'A_Pending'}, {'W_Call incomplete files'})"/>
+      <arc id="4667386672" source="A_Validating" target="({'A_Validating'}, {'O_Create Offer', 'A_Cancelled', 'A_Denied', 'O_Accepted'})"/>
+      <arc id="4671780160" source="W_Validate application" target="end"/>
+      <arc id="4671769408" source="({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})" target="A_Cancelled"/>
+      <arc id="4671782736" source="A_Cancelled" target="({'A_Cancelled', 'A_Pending'}, {'W_Call incomplete files'})"/>
+      <arc id="4671775568" source="({'A_Cancelled', 'A_Pending'}, {'W_Call incomplete files'})" target="W_Call incomplete files"/>
+      <arc id="4671779152" source="A_Complete" target="({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})"/>
+      <arc id="4671768400" source="({'A_Complete'}, {'O_Create Offer', 'W_Call after offers'})" target="O_Create Offer"/>
+      <arc id="4671767392" source="O_Sent (mail and online)" target="end"/>
+      <arc id="4671778144" source="A_Pending" target="({'A_Cancelled', 'A_Pending'}, {'W_Call incomplete files'})"/>
+      <arc id="4667383648" source="W_Handle leads" target="({'W_Handle leads', 'A_Create Application'}, {'A_Concept'})"/>
+      <arc id="4667389808" source="A_Create Application" target="({'W_Handle leads', 'A_Create Application'}, {'A_Concept'})"/>
+      <arc id="4671777136" source="W_Call after offers" target="end"/>
+      <arc id="4671773552" source="({'A_Create Application'}, {'A_Submitted'})" target="A_Submitted"/>
+      <arc id="4671780720" source="A_Denied" target="({'A_Cancelled', 'A_Denied'}, {'W_Complete application', 'W_Call after offers'})"/>
+      <arc id="4671772544" source="({'A_Cancelled', 'A_Accepted', 'A_Denied'}, {'W_Complete application'})" target="W_Complete application"/>
+      <arc id="4671778704" source="O_Refused" target="end"/>
+      <arc id="4671771536" source="A_Pending" target="end"/>
+      <arc id="4671775120" source="({'W_Call incomplete files', 'A_Complete'}, {'A_Validating'})" target="A_Validating"/>
+      <arc id="4667384208" source="W_Complete application" target="({'W_Complete application', 'A_Validating'}, {'O_Create Offer'})"/>
+      <arc id="4671777696" source="O_Sent (online only)" target="end"/>
+      <arc id="4671781280" source="({'W_Complete application'}, {'A_Complete'})" target="A_Complete"/>
+      <arc id="4671766944" source="({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})" target="W_Call incomplete files"/>
+      <arc id="4671769520" source="A_Denied" target="end"/>
+      <arc id="4671773104" source="A_Complete" target="end"/>
+      <arc id="4671776688" source="A_Cancelled" target="({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})"/>
+      <arc id="4671775680" source="({'A_Cancelled'}, {'W_Call incomplete files', 'W_Complete application', 'W_Call after offers'})" target="W_Call after offers"/>
+      <arc id="4671779264" source="O_Created" target="({'O_Created', 'A_Complete'}, {'A_Validating'})"/>
+      <arc id="4671768512" source="({'O_Created', 'A_Complete'}, {'A_Validating'})" target="A_Validating"/>
+      <arc id="4671781840" source="A_Complete" target="({'W_Call incomplete files', 'A_Complete'}, {'A_Validating'})"/>
+      <arc id="4667380176" source="({'O_Created', 'W_Call after offers'}, {'A_Validating'})" target="A_Validating"/>
+      <arc id="4671776240" source="A_Validating" target="end"/>
+      <arc id="4671769072" source="({'O_Created', 'A_Complete'}, {'A_Cancelled', 'A_Denied'})" target="A_Denied"/>
+      <arc id="4667378160" source="W_Call after offers" target="({'W_Call incomplete files', 'W_Call after offers'}, {'A_Validating'})"/>
     </page>
     <finalmarkings>
       <marking>
