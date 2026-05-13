@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="splace_in_A_Cancelled_O_Sent (mail and online)">
+        <name>
+          <text>splace_in_A_Cancelled_O_Sent (mail and online)</text>
+        </name>
+      </place>
+      <place id="pre_O_Accepted">
+        <name>
+          <text>pre_O_Accepted</text>
+        </name>
+      </place>
+      <place id="intplace_A_Complete">
+        <name>
+          <text>intplace_A_Complete</text>
+        </name>
+      </place>
+      <place id="intplace_A_Submitted">
+        <name>
+          <text>intplace_A_Submitted</text>
+        </name>
+      </place>
+      <place id="intplace_O_Sent (mail and online)">
+        <name>
+          <text>intplace_O_Sent (mail and online)</text>
+        </name>
+      </place>
+      <place id="pre_A_Incomplete">
+        <name>
+          <text>pre_A_Incomplete</text>
+        </name>
+      </place>
+      <place id="intplace_W_Validate application">
+        <name>
+          <text>intplace_W_Validate application</text>
+        </name>
+      </place>
+      <place id="pre_O_Create Offer">
+        <name>
+          <text>pre_O_Create Offer</text>
+        </name>
+      </place>
+      <place id="pre_A_Complete">
+        <name>
+          <text>pre_A_Complete</text>
+        </name>
+      </place>
+      <place id="pre_A_Validating">
+        <name>
+          <text>pre_A_Validating</text>
+        </name>
+      </place>
+      <place id="pre_A_Concept">
+        <name>
+          <text>pre_A_Concept</text>
+        </name>
+      </place>
+      <place id="intplace_O_Returned">
+        <name>
+          <text>intplace_O_Returned</text>
+        </name>
+      </place>
+      <place id="intplace_O_Refused">
+        <name>
+          <text>intplace_O_Refused</text>
+        </name>
+      </place>
+      <place id="intplace_A_Pending">
+        <name>
+          <text>intplace_A_Pending</text>
+        </name>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <place id="pre_A_Pending">
+        <name>
+          <text>pre_A_Pending</text>
+        </name>
+      </place>
+      <place id="intplace_A_Validating">
+        <name>
+          <text>intplace_A_Validating</text>
+        </name>
+      </place>
+      <place id="intplace_A_Create Application">
+        <name>
+          <text>intplace_A_Create Application</text>
+        </name>
+      </place>
+      <place id="pre_A_Accepted">
+        <name>
+          <text>pre_A_Accepted</text>
+        </name>
+      </place>
+      <place id="pre_O_Refused">
+        <name>
+          <text>pre_O_Refused</text>
+        </name>
+      </place>
+      <place id="pre_O_Created">
+        <name>
+          <text>pre_O_Created</text>
+        </name>
+      </place>
+      <place id="pre_W_Validate application">
+        <name>
+          <text>pre_W_Validate application</text>
+        </name>
+      </place>
+      <place id="pre_O_Sent (mail and online)">
+        <name>
+          <text>pre_O_Sent (mail and online)</text>
+        </name>
+      </place>
+      <place id="intplace_A_Incomplete">
+        <name>
+          <text>intplace_A_Incomplete</text>
+        </name>
+      </place>
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="pre_O_Cancelled">
+        <name>
+          <text>pre_O_Cancelled</text>
+        </name>
+      </place>
+      <place id="intplace_O_Cancelled">
+        <name>
+          <text>intplace_O_Cancelled</text>
+        </name>
+      </place>
+      <transition id="A_Create Application">
+        <name>
+          <text>A_Create Application</text>
+        </name>
+      </transition>
+      <transition id="A_Submitted">
+        <name>
+          <text>A_Submitted</text>
+        </name>
+      </transition>
+      <transition id="W_Call incomplete files">
+        <name>
+          <text>W_Call incomplete files</text>
+        </name>
+      </transition>
+      <transition id="hid_13">
+        <name>
+          <text>hid_13</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d00a4085-d7d8-42f4-8c7d-537ec2b952c4"/>
+      </transition>
+      <transition id="hid_43">
+        <name>
+          <text>hid_43</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ce31a328-2e24-4a5a-b4fc-04e4afa7ef56"/>
+      </transition>
+      <transition id="hid_49">
+        <name>
+          <text>hid_49</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="42233859-2b94-47e9-94ef-77ee6758312e"/>
+      </transition>
+      <transition id="O_Accepted">
+        <name>
+          <text>O_Accepted</text>
+        </name>
+      </transition>
+      <transition id="O_Returned">
+        <name>
+          <text>O_Returned</text>
+        </name>
+      </transition>
+      <transition id="O_Refused">
+        <name>
+          <text>O_Refused</text>
+        </name>
+      </transition>
+      <transition id="A_Incomplete">
+        <name>
+          <text>A_Incomplete</text>
+        </name>
+      </transition>
+      <transition id="W_Complete application">
+        <name>
+          <text>W_Complete application</text>
+        </name>
+      </transition>
+      <transition id="A_Accepted">
+        <name>
+          <text>A_Accepted</text>
+        </name>
+      </transition>
+      <transition id="A_Complete">
+        <name>
+          <text>A_Complete</text>
+        </name>
+      </transition>
+      <transition id="A_Concept">
+        <name>
+          <text>A_Concept</text>
+        </name>
+      </transition>
+      <transition id="hid_23">
+        <name>
+          <text>hid_23</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="97913550-23e2-49ec-ac37-624f0043f03c"/>
+      </transition>
+      <transition id="hid_40">
+        <name>
+          <text>hid_40</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="48f7794e-3428-4a38-8cf7-0ee13467de8f"/>
+      </transition>
+      <transition id="hid_42">
+        <name>
+          <text>hid_42</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="91131477-6300-462b-8cba-8e890bccd2a9"/>
+      </transition>
+      <transition id="O_Cancelled">
+        <name>
+          <text>O_Cancelled</text>
+        </name>
+      </transition>
+      <transition id="hid_27">
+        <name>
+          <text>hid_27</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1f0dd383-90ae-41f5-9a6d-10465f5875ae"/>
+      </transition>
+      <transition id="hid_36">
+        <name>
+          <text>hid_36</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="35a5512f-7fc6-43b7-9fcd-0de7ac2e3b46"/>
+      </transition>
+      <transition id="hid_50">
+        <name>
+          <text>hid_50</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="fd1a7cf9-b66c-4596-a986-aea01eca1baf"/>
+      </transition>
+      <transition id="O_Create Offer">
+        <name>
+          <text>O_Create Offer</text>
+        </name>
+      </transition>
+      <transition id="A_Cancelled">
+        <name>
+          <text>A_Cancelled</text>
+        </name>
+      </transition>
+      <transition id="A_Pending">
+        <name>
+          <text>A_Pending</text>
+        </name>
+      </transition>
+      <transition id="hid_38">
+        <name>
+          <text>hid_38</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="96d5d38d-de59-49b1-bac3-10aaec803967"/>
+      </transition>
+      <transition id="hid_45">
+        <name>
+          <text>hid_45</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="010e84a9-846b-4184-9268-b870942fcef6"/>
+      </transition>
+      <transition id="A_Denied">
+        <name>
+          <text>A_Denied</text>
+        </name>
+      </transition>
+      <transition id="W_Handle leads">
+        <name>
+          <text>W_Handle leads</text>
+        </name>
+      </transition>
+      <transition id="O_Sent (mail and online)">
+        <name>
+          <text>O_Sent (mail and online)</text>
+        </name>
+      </transition>
+      <transition id="hid_15">
+        <name>
+          <text>hid_15</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f2223f9c-1266-4b79-ae48-76a284af6ce7"/>
+      </transition>
+      <transition id="hid_24">
+        <name>
+          <text>hid_24</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9e9f4e32-3772-4293-b8b9-b05ed3b5ff6b"/>
+      </transition>
+      <transition id="hid_26">
+        <name>
+          <text>hid_26</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="17181b38-6a1c-4b10-99b1-b1d6729c4968"/>
+      </transition>
+      <transition id="O_Created">
+        <name>
+          <text>O_Created</text>
+        </name>
+      </transition>
+      <transition id="hid_33">
+        <name>
+          <text>hid_33</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="fa4a0549-5898-4253-a0c4-5769ebb66b78"/>
+      </transition>
+      <transition id="hid_37">
+        <name>
+          <text>hid_37</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="85c29177-f6d3-4ce6-aaea-f40f242b0e06"/>
+      </transition>
+      <transition id="hid_44">
+        <name>
+          <text>hid_44</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="084fc85a-a09f-47b9-92e4-a1586c6b235a"/>
+      </transition>
+      <transition id="hid_47">
+        <name>
+          <text>hid_47</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="449301d0-76b3-4c44-a0fa-4d46d9520bbf"/>
+      </transition>
+      <transition id="hid_48">
+        <name>
+          <text>hid_48</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="4b6eff6c-3509-47b8-aa09-7ba525186e33"/>
+      </transition>
+      <transition id="A_Validating">
+        <name>
+          <text>A_Validating</text>
+        </name>
+      </transition>
+      <transition id="W_Validate application">
+        <name>
+          <text>W_Validate application</text>
+        </name>
+      </transition>
+      <arc id="4736452096" source="intplace_O_Sent (mail and online)" target="W_Complete application"/>
+      <arc id="4736466432" source="hid_42" target="pre_W_Validate application"/>
+      <arc id="4736455680" source="intplace_A_Incomplete" target="hid_45"/>
+      <arc id="4736459264" source="intplace_A_Pending" target="hid_48"/>
+      <arc id="4736465424" source="intplace_A_Incomplete" target="hid_44"/>
+      <arc id="4736451088" source="hid_45" target="pre_O_Accepted"/>
+      <arc id="4737493024" source="pre_O_Accepted" target="O_Accepted"/>
+      <arc id="4736460832" source="W_Call incomplete files" target="pre_A_Validating"/>
+      <arc id="4736459824" source="A_Cancelled" target="pre_O_Cancelled"/>
+      <arc id="4736594480" source="source0" target="A_Create Application"/>
+      <arc id="4736589888" source="hid_24" target="sink0"/>
+      <arc id="4736593472" source="A_Concept" target="pre_A_Accepted"/>
+      <arc id="4736458816" source="intplace_A_Pending" target="hid_47"/>
+      <arc id="4745407056" source="pre_O_Cancelled" target="O_Cancelled"/>
+      <arc id="4736464976" source="intplace_A_Submitted" target="W_Handle leads"/>
+      <arc id="4736596048" source="O_Accepted" target="pre_A_Pending"/>
+      <arc id="4736454224" source="W_Handle leads" target="pre_A_Concept"/>
+      <arc id="4736591456" source="pre_A_Incomplete" target="A_Incomplete"/>
+      <arc id="4736453216" source="intplace_A_Validating" target="hid_13"/>
+      <arc id="4736583280" source="pre_A_Concept" target="A_Concept"/>
+      <arc id="4736466544" source="intplace_O_Refused" target="hid_42"/>
+      <arc id="4736589440" source="intplace_O_Cancelled" target="hid_24"/>
+      <arc id="4736454784" source="hid_40" target="pre_A_Concept"/>
+      <arc id="4745399440" source="pre_O_Created" target="O_Created"/>
+      <arc id="4736592016" source="O_Create Offer" target="pre_O_Created"/>
+      <arc id="4736464528" source="intplace_O_Refused" target="hid_43"/>
+      <arc id="4736594592" source="intplace_O_Returned" target="hid_33"/>
+      <arc id="4736455344" source="intplace_O_Returned" target="A_Denied"/>
+      <arc id="4736466096" source="hid_49" target="sink0"/>
+      <arc id="4736585408" source="intplace_W_Validate application" target="hid_36"/>
+      <arc id="4736588992" source="A_Submitted" target="intplace_A_Submitted"/>
+      <arc id="4736461504" source="hid_23" target="pre_O_Cancelled"/>
+      <arc id="4736595152" source="pre_A_Pending" target="A_Pending"/>
+      <arc id="4736587984" source="intplace_A_Complete" target="hid_27"/>
+      <arc id="4736459488" source="intplace_O_Returned" target="hid_15"/>
+      <arc id="4736590560" source="A_Validating" target="intplace_A_Validating"/>
+      <arc id="4736452320" source="hid_27" target="pre_O_Create Offer"/>
+      <arc id="4737494256" source="pre_W_Validate application" target="W_Validate application"/>
+      <arc id="4736585968" source="intplace_A_Submitted" target="hid_40"/>
+      <arc id="4736454896" source="A_Incomplete" target="intplace_A_Incomplete"/>
+      <arc id="4736462064" source="hid_48" target="pre_W_Validate application"/>
+      <arc id="4736464640" source="intplace_O_Returned" target="hid_13"/>
+      <arc id="4736453888" source="hid_44" target="pre_A_Validating"/>
+      <arc id="4736461056" source="hid_50" target="splace_in_A_Cancelled_O_Sent (mail and online)"/>
+      <arc id="4736460048" source="A_Accepted" target="pre_O_Create Offer"/>
+      <arc id="4736591120" source="pre_O_Refused" target="O_Refused"/>
+      <arc id="4736452880" source="hid_50" target="pre_A_Complete"/>
+      <arc id="4736593696" source="intplace_A_Create Application" target="hid_38"/>
+      <arc id="4736462624" source="intplace_O_Sent (mail and online)" target="hid_50"/>
+      <arc id="4736596272" source="intplace_O_Cancelled" target="hid_23"/>
+      <arc id="4736592688" source="intplace_A_Complete" target="hid_26"/>
+      <arc id="4736461616" source="hid_26" target="pre_A_Validating"/>
+      <arc id="4736457024" source="hid_36" target="pre_A_Incomplete"/>
+      <arc id="4736460608" source="hid_47" target="pre_O_Cancelled"/>
+      <arc id="4736453440" source="intplace_A_Validating" target="A_Denied"/>
+      <arc id="4736594256" source="O_Created" target="pre_O_Sent (mail and online)"/>
+      <arc id="4736583504" source="O_Cancelled" target="intplace_O_Cancelled"/>
+      <arc id="4736462176" source="intplace_A_Validating" target="O_Returned"/>
+      <arc id="4736589664" source="intplace_W_Validate application" target="hid_37"/>
+      <arc id="4736458592" source="intplace_A_Pending" target="hid_49"/>
+      <arc id="4737489776" source="hid_15" target="pre_W_Validate application"/>
+      <arc id="4736595824" source="O_Returned" target="intplace_O_Returned"/>
+      <arc id="4736454000" source="A_Pending" target="intplace_A_Pending"/>
+      <arc id="4736587648" source="pre_O_Sent (mail and online)" target="O_Sent (mail and online)"/>
+      <arc id="4745401232" source="pre_A_Accepted" target="A_Accepted"/>
+      <arc id="4737494928" source="hid_13" target="pre_O_Accepted"/>
+      <arc id="4736597392" source="W_Validate application" target="intplace_W_Validate application"/>
+      <arc id="4736461728" source="hid_33" target="pre_A_Incomplete"/>
+      <arc id="4736458144" source="hid_38" target="pre_A_Concept"/>
+      <arc id="4736465312" source="O_Sent (mail and online)" target="intplace_O_Sent (mail and online)"/>
+      <arc id="4745402800" source="pre_A_Complete" target="A_Complete"/>
+      <arc id="4737489328" source="pre_A_Validating" target="A_Validating"/>
+      <arc id="4736464304" source="intplace_A_Create Application" target="A_Submitted"/>
+      <arc id="4736588208" source="hid_37" target="sink0"/>
+      <arc id="4736459712" source="intplace_A_Validating" target="hid_15"/>
+      <arc id="4736587200" source="A_Create Application" target="intplace_A_Create Application"/>
+      <arc id="4736463296" source="splace_in_A_Cancelled_O_Sent (mail and online)" target="A_Cancelled"/>
+      <arc id="4736582608" source="A_Complete" target="intplace_A_Complete"/>
+      <arc id="4736589776" source="O_Refused" target="intplace_O_Refused"/>
+      <arc id="4736451536" source="hid_43" target="sink0"/>
+      <arc id="4736458704" source="intplace_A_Incomplete" target="W_Call incomplete files"/>
+      <arc id="4745399776" source="pre_O_Create Offer" target="O_Create Offer"/>
+      <arc id="4736464864" source="W_Complete application" target="pre_A_Complete"/>
+      <arc id="4736585184" source="A_Denied" target="pre_O_Refused"/>
+      <arc id="4736453104" source="intplace_A_Complete" target="A_Cancelled"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink0">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
