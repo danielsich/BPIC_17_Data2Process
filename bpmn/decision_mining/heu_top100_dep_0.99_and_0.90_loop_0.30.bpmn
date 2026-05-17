@@ -229,7 +229,7 @@
 			<bpmn:incoming>idid1e501b0f-dd18-4313-aa48-26986ca1c366</bpmn:incoming>
 			<bpmn:outgoing>idid133531f5-1d57-4c0a-808c-4cfc8d5ce9ae</bpmn:outgoing>
 		</bpmn:task>
-		<bpmn:sequenceFlow id="ididd124bbd4-6c39-4595-8c03-3c80f3f7c821" name="" sourceRef="id57cc37a3-05b3-4ea1-acb9-777762648022" targetRef="id233b7ceb-26d4-4581-b718-b60758f1f840"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &lt;= 375.0 AND OfferedAmount &gt; 10550.0) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &gt; 375.0 AND NumberOfTerms &lt;= 78.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &gt; 375.0 AND NumberOfTerms &gt; 78.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &lt;= 62.26 AND LoanGoal_Remaining debt home &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &lt;= 1034.45 AND OfferGap &lt;= -167.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &lt;= 1034.45 AND OfferGap &gt; -167.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &gt; 1034.45 AND LoanGoal_Car &lt;= 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &gt; 1034.45 AND LoanGoal_Car &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &lt;= 7800.0 AND LoanGoal_Existing loan takeover &lt;= 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &lt;= 7800.0 AND LoanGoal_Existing loan takeover &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &gt; 7800.0 AND FirstWithdrawalAmount &lt;= 7978.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &gt; 7800.0 AND FirstWithdrawalAmount &gt; 7978.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
+		<bpmn:sequenceFlow id="ididd124bbd4-6c39-4595-8c03-3c80f3f7c821" name="CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 (+2 more) [+11 OR]" sourceRef="id57cc37a3-05b3-4ea1-acb9-777762648022" targetRef="id233b7ceb-26d4-4581-b718-b60758f1f840"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &lt;= 375.0 AND OfferedAmount &gt; 10550.0) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &gt; 375.0 AND NumberOfTerms &lt;= 78.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &gt; 375.0 AND NumberOfTerms &gt; 78.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &lt;= 62.26 AND LoanGoal_Remaining debt home &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &lt;= 1034.45 AND OfferGap &lt;= -167.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &lt;= 1034.45 AND OfferGap &gt; -167.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &gt; 1034.45 AND LoanGoal_Car &lt;= 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &lt;= 1550.0 AND MonthlyCost &gt; 1034.45 AND LoanGoal_Car &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &lt;= 7800.0 AND LoanGoal_Existing loan takeover &lt;= 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &lt;= 7800.0 AND LoanGoal_Existing loan takeover &gt; 0.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &gt; 7800.0 AND FirstWithdrawalAmount &lt;= 7978.5) OR (CreditScore &gt; 296.0 AND OfferGap &gt; 1550.0 AND RequestedAmount &gt; 7800.0 AND FirstWithdrawalAmount &gt; 7978.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
 		<bpmn:sequenceFlow id="idid219efdc1-aff3-40fd-b8bf-f75f4f4c1d3e" name="" sourceRef="id596b049e-7b0e-4748-b207-6e3b72ffd41b" targetRef="id5878bfd3-f96a-4b0b-85cf-3b2c10d92933" />
 		<bpmn:sequenceFlow id="idid6d93e595-0475-449f-a7af-2761011ade29" name="" sourceRef="idfc2eecff-e88e-4153-89d8-c630282f624b" targetRef="id8be1bd4c-c777-4fce-bf7c-fa9cd73a4bce" />
 		<bpmn:sequenceFlow id="idid6da8e587-c306-425a-9410-60771423d2b1" name="" sourceRef="ida34385b3-d5e6-4d21-b1e6-6e6cae1dbc94" targetRef="ida7af0d24-416a-448c-98b2-07e82e4d10a6" />
@@ -268,7 +268,7 @@
 		<bpmn:sequenceFlow id="idid69999a9b-62a3-4b16-9e28-0158f69cd662" name="" sourceRef="idbb5c6106-262c-47b0-a899-192d396f59d4" targetRef="ide9e9f48a-ebf3-4866-8ad4-d917ae4ed839" />
 		<bpmn:sequenceFlow id="idid698385e3-e70a-4aca-af7c-a0b416defbfb" name="" sourceRef="idebfb37b2-4e6c-429d-a87c-c81054a89055" targetRef="id93ff91a7-db0a-435f-a8be-9add089fce1d" />
 		<bpmn:sequenceFlow id="idid731994f4-31e0-4777-b2bc-7b220d680306" name="" sourceRef="idfb44bcd9-ed9c-4380-8f32-bfacab31ce2c" targetRef="id3c9c02c2-71c5-4f28-b260-d8ef7e6aa7fc" />
-		<bpmn:sequenceFlow id="idid57c7effb-9cf6-480d-a3c2-98de11fccbb2" name="" sourceRef="id0213defb-1c92-4159-bf0b-621dab236d33" targetRef="id66bf4ad2-cf12-4aaa-8a8e-3b8a501753b4"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &gt; 62.26 AND FirstWithdrawalAmount &lt;= 5988.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &gt; 62.26 AND FirstWithdrawalAmount &gt; 5988.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
+		<bpmn:sequenceFlow id="idid57c7effb-9cf6-480d-a3c2-98de11fccbb2" name="CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 (+2 more) [+1 OR]" sourceRef="id0213defb-1c92-4159-bf0b-621dab236d33" targetRef="id66bf4ad2-cf12-4aaa-8a8e-3b8a501753b4"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &gt; 62.26 AND FirstWithdrawalAmount &lt;= 5988.5) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &gt; 62.26 AND FirstWithdrawalAmount &gt; 5988.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
 		<bpmn:sequenceFlow id="idide7349c9d-e18c-45e7-a5c7-e6b444f2b056" name="" sourceRef="id7a76f4b5-0dfe-4056-8da8-2d887422ec38" targetRef="id26d75702-24ce-4966-aa9f-b522444a8974" />
 		<bpmn:sequenceFlow id="idide593ff78-8070-4932-bb65-1a7f12b8f751" name="" sourceRef="idc46d9ce1-a17f-4f5d-a08e-d7920662d36a" targetRef="id332b5801-29b5-4486-85fa-ec0f31f8334b" />
 		<bpmn:sequenceFlow id="ididde27de74-c658-4973-8096-f09659fdb4e0" name="" sourceRef="idf43503bd-b044-4d49-8fe7-105d831a0849" targetRef="ide52ea237-f911-49ff-939a-17e13320f014" />
@@ -279,7 +279,7 @@
 		<bpmn:sequenceFlow id="idid595a3087-08f9-42bc-9116-619db2b9dcef" name="" sourceRef="id362712fe-3b9f-47d3-8d48-8701e2055f16" targetRef="id9bbe4861-f196-4da3-b571-90cc65f7693c" />
 		<bpmn:sequenceFlow id="idid86704e6b-2b0e-4c99-8476-83bd05ba1e00" name="" sourceRef="id7a76f4b5-0dfe-4056-8da8-2d887422ec38" targetRef="id93ff91a7-db0a-435f-a8be-9add089fce1d" />
 		<bpmn:sequenceFlow id="idid207df6b4-9a20-4594-817b-75db10e458ff" name="" sourceRef="id362712fe-3b9f-47d3-8d48-8701e2055f16" targetRef="id7f975c37-7a58-4731-9dad-0d6b10d7e021" />
-		<bpmn:sequenceFlow id="idid1e501b0f-dd18-4313-aa48-26986ca1c366" name="" sourceRef="id93ff91a7-db0a-435f-a8be-9add089fce1d" targetRef="id7ee7f4ae-2653-4090-8092-bc63eb0a10b8"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &lt;= 375.0 AND OfferedAmount &lt;= 10550.0) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &lt;= 62.26 AND LoanGoal_Remaining debt home &lt;= 0.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
+		<bpmn:sequenceFlow id="idid1e501b0f-dd18-4313-aa48-26986ca1c366" name="CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 (+2 more) [+1 OR]" sourceRef="id93ff91a7-db0a-435f-a8be-9add089fce1d" targetRef="id7ee7f4ae-2653-4090-8092-bc63eb0a10b8"><bpmn:conditionExpression xsi:type="tFormalExpression">(CreditScore &lt;= 296.0 AND ApplicationType_New credit &lt;= 0.5 AND FirstWithdrawalAmount &lt;= 375.0 AND OfferedAmount &lt;= 10550.0) OR (CreditScore &lt;= 296.0 AND ApplicationType_New credit &gt; 0.5 AND FirstWithdrawalAmount &lt;= 62.26 AND LoanGoal_Remaining debt home &lt;= 0.5)</bpmn:conditionExpression></bpmn:sequenceFlow>
 		<bpmn:sequenceFlow id="idid9dcd2f30-b8d8-4b92-b024-53700ebc9145" name="" sourceRef="id2c43e555-09ef-4ba2-bb74-c9e09236759b" targetRef="idfc2eecff-e88e-4153-89d8-c630282f624b" />
 		<bpmn:sequenceFlow id="ididc3966144-74f5-4373-9432-bb44a532d3bb" name="" sourceRef="id1ccc03fb-044f-4987-86ae-1e0448bce6ee" targetRef="ide9e9f48a-ebf3-4866-8ad4-d917ae4ed839" />
 		<bpmn:sequenceFlow id="idid5308ba20-56a5-4045-a2c1-a28ad5e7813f" name="" sourceRef="id8be1bd4c-c777-4fce-bf7c-fa9cd73a4bce" targetRef="idcd6d2c69-4696-460b-bcb6-6aea07dcc6bb" />
@@ -447,7 +447,7 @@
 				<omgdi:waypoint x="3475.45" y="-106.0" />
 				<omgdi:waypoint x="3498.77" y="-106.0" />
 				<omgdi:waypoint x="3531.25" y="-106.0" />
-			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNLabel><omgdc:Bounds height="30.0" width="300.0" x="3340.68" y="-141.0" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
 			<bpmndi:BPMNEdge bpmnElement="idid219efdc1-aff3-40fd-b8bf-f75f4f4c1d3e" id="idid219efdc1-aff3-40fd-b8bf-f75f4f4c1d3e_gui">
 				<omgdi:waypoint x="2768.3850085178874" y="-92.0" />
 				<omgdi:waypoint x="2773.83" y="-86.52" />
@@ -741,7 +741,7 @@
 				<omgdi:waypoint x="3038.8" y="-24.49" />
 				<omgdi:waypoint x="3106.06" y="-26.84" />
 				<omgdi:waypoint x="3162.5" y="-28.790463692038497" />
-			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNLabel><omgdc:Bounds height="30.0" width="300.0" x="2926.68" y="-60.81" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
 			<bpmndi:BPMNEdge bpmnElement="idide7349c9d-e18c-45e7-a5c7-e6b444f2b056" id="idide7349c9d-e18c-45e7-a5c7-e6b444f2b056_gui">
 				<omgdi:waypoint x="4097.5" y="-119.37001375515814" />
 				<omgdi:waypoint x="4099.58" y="-118.32" />
@@ -813,7 +813,7 @@
 				<omgdi:waypoint x="3896.01" y="-158.61" />
 				<omgdi:waypoint x="3907.06" y="-161.15" />
 				<omgdi:waypoint x="3929.25" y="-166.16233792709778" />
-			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNLabel><omgdc:Bounds height="30.0" width="300.0" x="3756.39" y="-195.98" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
 			<bpmndi:BPMNEdge bpmnElement="idid9dcd2f30-b8d8-4b92-b024-53700ebc9145" id="idid9dcd2f30-b8d8-4b92-b024-53700ebc9145_gui">
 				<omgdi:waypoint x="1300.0" y="-283.2901416765053" />
 				<omgdi:waypoint x="1293.12" y="-282.09" />
